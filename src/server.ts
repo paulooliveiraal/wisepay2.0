@@ -28,7 +28,7 @@ app.use(cors({
 
 // Rotas
 app.use('/api', itensRouter)
-app.use('/', healthRouter)
+app.use('/api', healthRouter)
 
 // Resposta padrão para quaisquer outras requisições:
 app.use((req, res) => {
