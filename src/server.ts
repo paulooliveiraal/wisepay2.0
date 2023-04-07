@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import itensRouter from './routers/itens-routers'
+import healthRouter from './routers/health-router'
 
 // Porta do servidor
 const PORT = process.env.PORT || 4000
@@ -27,6 +28,7 @@ app.use(cors({
 
 // Rotas
 app.use('/api', itensRouter)
+app.use('/', healthRouter)
 
 // Resposta padrão para quaisquer outras requisições:
 app.use((req, res) => {
